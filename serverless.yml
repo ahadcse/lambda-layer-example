@@ -1,0 +1,13 @@
+service: lambda-layer-example
+frameworkVersion: ">=1.36.3"
+provider:
+  name: aws
+  region: eu-west-1
+  runtime: nodejs8.10
+
+layers:
+  LambdaLayer:
+    description: Node modules
+    path: files
+    compatibleRuntimes:
+      - nodejs8.10
